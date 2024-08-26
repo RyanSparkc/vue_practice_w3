@@ -278,7 +278,7 @@ const signOut = async () => {
   document.cookie = ''
   console.log('signOut', loginStatus.value);
   console.log('myCookie', myCookie.value);
-  router.push('/login')
+  router.push('/week2/login')
 }
 
 

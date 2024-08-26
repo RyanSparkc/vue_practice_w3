@@ -40,15 +40,15 @@ const router = createRouter({
       component: () => import('../views/Week2View.vue'),
       children: [
         {
-          path: '/login',
+          path: 'login',
           component: () => import('../components/week2/LoginComponent.vue')
         },
         {
-          path: '/register',
+          path: 'register',
           component: () => import('../components/week2/RegisterComponent.vue')
         },
         {
-          path: '/todo',
+          path: 'todo',
           component: () => import('../components/week2/ToDoComponent.vue')
         }
       ]

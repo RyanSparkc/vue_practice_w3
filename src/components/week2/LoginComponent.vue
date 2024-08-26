@@ -15,7 +15,8 @@
               v-model="userInfo.password">
           </div>
           <button type="button" class="btn btn-primary d-block w-100" @click="login">登入</button>
-          <router-link to="/register" class="d-block w-100 text-center mt-2">沒有帳號嗎?</router-link>
+          <router-link to="/week2/register"
+            class="d-block w-100 text-center mt-2">沒有帳號嗎?</router-link>
         </form>
       </div>
     </div>
@@ -44,7 +45,7 @@ const login = async () => {
     console.log(res);
     const expirationDate = new Date(res.data.exp * 1000).toUTCString();
     document.cookie = `Vue-week2=${res.data.token}; expires=${expirationDate}; path=/`;
-    router.push('/todo');
+    router.push('/week2/todo');
   } catch (err) {
     console.log(err);
     alert(err.response.data.message);
