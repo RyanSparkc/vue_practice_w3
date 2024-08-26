@@ -16,15 +16,15 @@
         <tr v-for="item in data" :key="item.id">
           <td scope="row">
             <span v-if="!item.isEdit">{{ item.title }}</span>
-            <input v-else type="text" v-model="tempData.title">
+            <input v-else class="form-control" type="text" v-model="tempData.title">
           </td>
           <td>
             <span v-if="!item.isEdit">{{ item.desc }}</span>
-            <input v-else type="text" v-model="tempData.desc">
+            <input v-else class="form-control" type="text" v-model="tempData.desc">
           </td>
           <td>
             <span v-if="!item.isEdit">{{ item.price }}</span>
-            <input v-else type="number" v-model.number="tempData.price">
+            <input v-else class="form-control" type="number" v-model.number="tempData.price">
           </td>
           <td>
             <div v-if="!item.isEdit">
@@ -32,7 +32,7 @@
               <span class="mx-2">{{ item.count }}</span>
               <button class="btn btn-sm btn-light" @click="subCount(item)">-</button>
             </div>
-            <input v-else type="number" v-model.number="tempData.count">
+            <input v-else class="form-control" type="number" v-model.number="tempData.count">
           </td>
           <td class="d-flex gap-2">
             <button v-if="!item.isEdit" class="btn btn-sm btn-primary"
@@ -227,6 +227,7 @@ const confirmAdd = () => {
   isAdd.value = false;
   data.value.push(newItem);
   console.log('confirm-data', data.value);
+
 
   // 重置 tempData
   tempData.value = {

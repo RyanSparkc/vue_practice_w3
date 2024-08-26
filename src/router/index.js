@@ -27,16 +27,31 @@ const router = createRouter({
       component: () => import('../views/AsyncView.vue')
     },
     {
-      path: '/todo',
+      path: '/todo1',
       component: () => import('../views/ToDoView.vue')
     },
     {
       path: '/week1',
       component: () => import('../views/Week1View.vue')
     },
+
     {
       path: '/week2',
-      component: () => import('../views/Week2View.vue')
+      component: () => import('../views/Week2View.vue'),
+      children: [
+        {
+          path: '/login',
+          component: () => import('../components/week2/LoginComponent.vue')
+        },
+        {
+          path: '/register',
+          component: () => import('../components/week2/RegisterComponent.vue')
+        },
+        {
+          path: '/todo',
+          component: () => import('../components/week2/ToDoComponent.vue')
+        }
+      ]
     },
     {
       path: '/week3',

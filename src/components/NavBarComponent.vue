@@ -24,7 +24,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink class="nav-link" aria-current="page" to="/week1">week1</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/week2">week2</RouterLink>
+            <RouterLink class="nav-link" to="/login">week2</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/week3">week3</RouterLink>
