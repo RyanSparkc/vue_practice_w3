@@ -118,7 +118,6 @@ const totalSum = computed(() => {
 })
 
 
-
 // 刪除購物車單一品項
 const deleteCart = (cartItem) => {
   cart.value = cart.value.filter((item) => item.id !== cartItem.id);
